@@ -1,0 +1,18 @@
+
+body{
+  background-color: #f9d4f9;
+}
+p{
+  color: #ffffff;
+}
+
+.firstP{
+color:#000000;
+}
+
+div{
+padding: 10px;
+margin: 20px;
+border: dotted;
+background-color: #eff3f9;
+}
