@@ -1,18 +1,16 @@
-
 body{
-  background-color: #f9d4f9;
+  background-color:#f9d4f9;
 }
+
+
+.header{
+    padding: 30px;
+    font size: 40px;
+    text-align: center;
+    background: white;
+}
+
+
 p{
-  color: #ffffff;
-}
-
-.firstP{
-color:#000000;
-}
-
-div{
-padding: 10px;
-margin: 20px;
-border: dotted;
-background-color: #eff3f9;
+  color:#000000;
 }
