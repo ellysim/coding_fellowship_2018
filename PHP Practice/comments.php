@@ -2,15 +2,15 @@
 
   include ('include-all.php');
 
-
-$blogPostId = $_REQUEST['blogPostId'];
-$post = getPost($_REQUEST['blogPostId']);
-
 $errors = array();
 if (isset($_REQUEST['Submit'])){
 
   if(!$_REQUEST['name']){
     $errors['name'] = 'required';
+  }
+
+  if(!$_REQUEST['date']){
+    $errors['date'] = 'required (format: 0000-00-00)';
   }
 
   if(!$_REQUEST['text']){
@@ -21,6 +21,7 @@ if (isset($_REQUEST['Submit'])){
 
     insertComment(
       $_REQUEST['name'],
+      $_REQUEST['date'],
       $_REQUEST['text']
     );
   }
@@ -32,29 +33,23 @@ if (isset($_REQUEST['Submit'])){
   }
 
 
-
 echo "
-<div class='leftcolumn'>
-  <div class='summerpost'>
-    <h2 class='title'>$post[title]</h2> <br>
-      <p>$post[body]</p>
-  </div>
+
 
   <form action='' method ='POST'>
     <div class='comments'>
       <h2 class='title'>Comments</h2><br>
         <label>Name</label></br>
           <input type='text' name='name' value='".@$_REQUEST['name']."' /> <br/><br/>
+        <label>Date</label><br>
+          <input type='text' name='date' value='".@$_REQUEST['date']."'/> <br/><br/>
         <label>Leave a Comment</label><br>
-        <textarea rows='8' cols='60' name='text'></textarea> <br/>
+        <textarea rows='8' cols='100' name='text' value='".@$_REQUEST['text']."'></textarea> <br/>
         <input type='submit' name='Submit' value='Submit'/>
     </div>
   </form>
-</div>
+
       ";
 
 
-    include ('include/footer.php');
-
-
-  ?>
+?>
