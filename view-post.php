@@ -3,8 +3,8 @@
   include ('include-all.php');
 
 
-$blogPostId = $_REQUEST['blogPostId'];
-$post = getPost($_REQUEST['blogPostId']);
+  $blogPostId = $_REQUEST['blogPostId'];
+  $post = getPost($_REQUEST['blogPostId']);
 
 $errors = array();
 if (isset($_REQUEST['Submit'])){
@@ -42,12 +42,18 @@ echo "
 
   <form action='' method ='POST'>
     <div class='comments'>
-      <h2 class='title'>Comments</h2><br>
-        <label>Name</label></br>
-          <input type='text' name='name' value='".@$_REQUEST['name']."' /> <br/><br/>
-        <label>Leave a Comment</label><br>
-        <textarea rows='8' cols='60' name='text'></textarea> <br/>
-        <input type='submit' name='Submit' value='Submit'/>
+      <div class='left'>
+        <h2 class='title'>Comments</h2><br>
+          <label>Name</label></br>
+            <input type='text' name='name' value='".@$_REQUEST['name']."' /> <br/><br/>
+          <label>Leave a Comment</label><br>
+            <textarea name='text'></textarea> <br/>
+              <input type='submit' name='Submit' value='Submit'/>
+      </div>
+
+      <div class='right'>
+          comments will go here
+      </div>
     </div>
   </form>
 </div>

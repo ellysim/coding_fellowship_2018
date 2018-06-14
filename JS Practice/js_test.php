@@ -1,5 +1,6 @@
 <html>
   <head>
+<!-- Make a page fade in everytime you reload -->
       <title>JS Practice</title>
       <style>
         div{
@@ -22,9 +23,4 @@
 
 </body>
 
-
-<!--
-<div class='TheBox'style='background-color:#ccc;'>
-    This is the box
-</div>-->
 </html>
