@@ -4,7 +4,7 @@
       <style>
         body{
           text-align: center;
-        }ß
+        }
         div{
 
         }

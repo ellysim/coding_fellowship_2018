@@ -26,7 +26,7 @@ function getHeader (){
       <img src='images/IMG_3101.jpg' alt='me' width='175px' height='225px'>
 
       <p>ATL | STL | WashU 2020<br>
-          PreMed Student Withering Away<br>
+          PreMed + Cog Neuro<br>
           Hoping to one day get my life together and be a functioning human being!!</p>
       <a href= 'info.php'>More About Me</a>
     </div>
@@ -37,6 +37,18 @@ function getHeader (){
           <a href='https://www.snapchat.com/add/ellysim0429' target='_blank' class='fa fa-snapchat-ghost'></a>
           <a href='https://www.pinterest.com/ellysim0429/' target='_blank' class='fa fa-pinterest'></a>
           <a href='https://www.instagram.com/ellyysim/' target='_blank' class='fa fa-instagram'></a>
+        </div>
+
+        <div class='postme'>
+          <h2 class='title'>Tags</h2><br>";
+
+    $tagMenu = getAllTags();
+      foreach($tagMenu as $index=>$menu){
+        echo "
+          <a class='tags' href='tagindex.php?tagId=$index' style ='text-align:'center''>$menu[tagName]<br><br></a>
+             ";
+  }
+    echo"
         </div>
       </div>
     </html>";

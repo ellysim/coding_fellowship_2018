@@ -4,4 +4,5 @@
 include('config/config.php');
 include('include/db_query.php');
 include('include/blog.php');
+include('include/tags.php');
 include('include/header.php');

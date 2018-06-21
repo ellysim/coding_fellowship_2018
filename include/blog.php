@@ -31,7 +31,7 @@ function insertComment($blogPostId){
   $text=$_REQUEST['text'];
 
   $result = dbQuery("
-  INSERT INTO practice (blogPostId,name,text)
+  INSERT INTO comments (blogPostId,name,text)
   VALUE (:blogPostId,:name,:text)
     ",
     array(
@@ -42,10 +42,10 @@ function insertComment($blogPostId){
   );
 }
 
-function getComment($blogPostId){
+function getComments($blogPostId){
   $result = dbQuery("
     SELECT*
-    FROM practice
+    FROM comments
     WHERE blogPostId = :blogPostId
   ",
   array(
@@ -53,7 +53,7 @@ function getComment($blogPostId){
     )
   );
 
-  return $result->fetch();
+  return $result->fetchAll();
 }
 
  ?>

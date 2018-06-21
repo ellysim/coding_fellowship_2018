@@ -49,26 +49,16 @@
         </div>";
 
 
-  $showComments = getComment($_REQUEST['blogPostId']);
+  $showComments = getComments($_REQUEST['blogPostId']);
             foreach($showComments as $postComment){
 
-          echo "
-                <div class='right'>
-                <hr>
-                <h5>elly </h5>
-
-            </div>";
+      echo "
+        <div class='right'>
+          <hr>
+          <h5>$postComment[name]</h5>
+        </div>";
 }
 
-
-echo"
-          </div>
-
-      ";
-
-
-
-
-
-
+      echo"
+        </div> ";
 ?>
